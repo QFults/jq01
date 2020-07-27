@@ -6,20 +6,30 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 id="myHeader">Hello World!</h1>
-  <button id="clicker">Click Me</button>
+  <!-- <h1 id="myHeader">Hello World!</h1>
+  <button id="clicker">Click Me</button> -->
+
+  <h1>Count: <span id="count">0</span></h1>
+  <button id="increment">+</button>
   
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
   <script>
 
+    let count = 0
+
+    $('#increment').click(() => {
+      count++
+      $('#count').text(count)
+    })
+
     // document.querySelector('#myHeader').textContent = 'Goodbye World!'
 
     // $('#myHeader').html(`<button>Click Me</button>`)
 
-    $('#clicker').click(() => {
-      console.log('hi')
-    })
+    // $('#clicker').click(() => {
+    //   console.log('hi')
+    // })
 
 
   </script>
